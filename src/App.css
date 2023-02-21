@@ -1,11 +1,12 @@
 *,
 *::before,
-*::after{
+*::after {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-.header{
+
+.header {
   width: 99.7%;
   height: 10vh;
   display: flex;
@@ -13,16 +14,18 @@
   z-index: 2;
   position: fixed;
 }
-.header1{
+
+.header1 {
   display: flex;
   width: 30%;
   height: 10vh;
   align-items: center;
   text-align: center;
   color: white;
-  font-family:cursive;
+  font-family: cursive;
 }
-.header1 h3{
+
+.header1 h3 {
   margin-left: 30px;
   /* border: 2px solid red; */
   background-color: rgb(18, 18, 18);
@@ -30,34 +33,39 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  height :10vh;
+  height: 10vh;
 }
-.header2{
+
+.header2 {
   width: 88%;
   font-size: larger;
-  display:flex;
+  display: flex;
   justify-content: end;
 
 }
-.header2 div{
+
+.header2 div {
   display: flex;
   width: 30%;
   justify-content: space-around;
   align-items: center;
 }
-.header2 h3{
+
+.header2 h3 {
   height: 10vh;
   width: 20%;
   display: flex;
   align-items: center;
-  justify-content:center;
+  justify-content: center;
   color: white;
 }
-.header2 h3:hover{
-    background-color: rgb(2, 141, 2);
+
+.header2 h3:hover {
+  background-color: rgb(2, 141, 2);
 }
+
 /* url("img/hero/hero-1.jpg" */
-.banner{
+.banner {
   background-color: black;
   width: 99.7%;
   height: 16vh;
@@ -66,21 +74,25 @@
   color: white;
   z-index: 1;
 }
-.banner1{
+
+.banner1 {
   width: 35%;
   display: flex;
   justify-content: end;
 }
-.banner2{
+
+.banner2 {
   width: 65.7%;
   display: flex;
   justify-content: center;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-.banner2 p{
+
+.banner2 p {
   margin-right: 20px;
 }
-.Third-part{
+
+.Third-part {
   width: 99.7;
   height: 12vh;
   background-color: rgb(255, 255, 255);
@@ -90,7 +102,7 @@
   z-index: 1;
 }
 
-.men-image{
+.men-image {
   background-image: url('https://preview.colorlib.com/theme/malefashion/img/logo.png.webp');
   width: 20%;
   height: 3vh;
@@ -99,13 +111,14 @@
   text-align: end;
   margin-left: 200px;
 }
-.men-ul{
+
+.men-ul {
   display: flex;
   width: 40%;
   margin-right: 20px;
 }
 
-.first-ul{
+.first-ul {
   display: flex;
   width: 100%;
   justify-content: space-around;
@@ -117,34 +130,39 @@
   position: relative;
   padding: 0 10px;
 }
-.first-ul li{
+
+.first-ul li {
   position: relative;
   color: #333;
   letter-spacing: 0.8px;
   padding: 0 10px;
-  
+
 }
-.first-ul :after{
+
+.first-ul :after {
   content: '';
   position: absolute;
   background-color: red;
-  height: 3px ;
+  height: 3px;
   width: 0;
   left: 0;
   bottom: -10px;
   transition: 0.3s;
 }
-.first-ul :hover:after{
+
+.first-ul :hover:after {
   width: 100%;
   cursor: pointer;
 }
-.third-end{
+
+.third-end {
   display: flex;
-  width: 25% ;
+  width: 25%;
   justify-content: space-between;
-  
+
 }
-.third-end button{
+
+.third-end button {
   margin-left: 50px;
   background-color: rgb(52, 52, 255);
   color: white;
@@ -152,10 +170,12 @@
   padding: 0 4px 0px;
   border: none;
 }
-.third-end button:hover{
+
+.third-end button:hover {
   background-color: rgb(153, 153, 255);
 }
-.Background-image{
+
+.Background-image {
   background-image: url('https://preview.colorlib.com/theme/malefashion/img/hero/hero-1.jpg.webp');
   width: 99.7;
   height: 100vh;
@@ -165,34 +185,39 @@
   align-items: center;
   margin: 5px;
 }
-.hero-text{
+
+.hero-text {
   /* border: 2px solid red; */
   width: 70%;
-  font-family:"Nunito Sans", sans-serif; 
+  font-family: "Nunito Sans", sans-serif;
   font-weight: 100;
   word-spacing: 2px;
 }
-.hero-div h5{
+
+.hero-div h5 {
   color: red;
-  font-family: 'Nunito sans',sans-serif;
+  font-family: 'Nunito sans', sans-serif;
   font-weight: 500;
   margin-bottom: 40px;
 }
-.hero-div h1{
+
+.hero-div h1 {
   font-size: 60px;
-  font-family:"Nunito Sans", sans-serif; 
+  font-family: "Nunito Sans", sans-serif;
   font-weight: 400;
   margin-bottom: 30px;
 }
-.hero-div p{
+
+.hero-div p {
   margin-bottom: 40px;
   color: #333;
   letter-spacing: 0.8px;
 }
-.btn1{
+
+.btn1 {
   background-color: black;
   border: none;
-  color : white;
+  color: white;
   display: flex;
   align-items: center;
   width: 30%;
@@ -200,30 +225,35 @@
   font-size: 15px;
   justify-content: center;
   /* border-radius: 20px; */
-  font-family:  "Nunito Sans", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
 }
-.btn1:hover{
+
+.btn1:hover {
   background-color: rgb(36, 36, 36);
 }
-.main-hero{
+
+.main-hero {
   /* border: 2px solid black; */
   display: flex;
   justify-content: end;
   width: 50%;
 }
-.hero-div span
-{
+
+.hero-div span {
   margin-left: 10px;
 }
-.hero-div{
-   height: 70vh; 
+
+.hero-div {
+  height: 70vh;
 }
-.social-icon{
+
+.social-icon {
   height: 43vh;
   display: flex;
   align-items: flex-end;
 }
-.social-icon p{ 
+
+.social-icon p {
   height: 5vh;
   width: 10%;
   margin-right: 2px;
@@ -233,65 +263,73 @@
 
 /* Position Container */
 
-.position-container{
+.position-container {
   width: 100%;
   height: 1250px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.position-banner{
+
+.position-banner {
   width: 80%;
   /* border: 2px solid rgb(255, 0, 0); */
   height: 1100px;
-  padding-top:100px;
+  padding-top: 100px;
   padding-bottom: 100px;
   /* background-color: #333; */
   position: relative;
 }
-.banner3{
-  position : absolute;
+
+.banner3 {
+  position: absolute;
   right: 150px;
   top: 0px;
 }
-.banner4{
+
+.banner4 {
   font-size: 28px;
   width: 30%;
   position: absolute;
   left: 320px;
-  font-family: 'Nunito sans',sans-serif;
+  font-family: 'Nunito sans', sans-serif;
   font-weight: 100;
 
 }
-.banner5{
+
+.banner5 {
   position: absolute;
   top: 360px;
 }
-.banner6{
+
+.banner6 {
   font-size: 24px;
   /* border: 2px solid red; */
   width: 30%;
   position: absolute;
   bottom: 160px;
   font-weight: 100;
-  font-family: 'Nunito sans',sans-serif;
+  font-family: 'Nunito sans', sans-serif;
 }
-.banner7{
+
+.banner7 {
   position: absolute;
   bottom: 120px;
   right: 80px;
 }
-.banner8{
+
+.banner8 {
   font-size: 24px;
   /* border: 2px solid red; */
   width: 25%;
   position: absolute;
   bottom: 320px;
   right: 420px;
-  font-family: 'Nunito sans',sans-serif;
+  font-family: 'Nunito sans', sans-serif;
   font-weight: lighter;
 }
-.banner4 p{
+
+.banner4 p {
   font-family: "Nunito Sans", sans-serif;
   font-size: 21px;
   font-weight: 500;
@@ -300,28 +338,32 @@
   padding: 0 10px;
   margin-top: 20px;
 }
-.banner4 p{
+
+.banner4 p {
   position: relative;
   color: #333;
   letter-spacing: 0.8px;
   padding: 0 10px;
-  
+
 }
-.banner4 :after{
+
+.banner4 :after {
   content: '';
   position: absolute;
   background-color: rgb(255, 62, 62);
-  height: 3px ;
+  height: 3px;
   width: 0;
   left: 0;
   bottom: -10px;
   transition: 0.3s;
 }
-.banner4 :hover:after{
+
+.banner4 :hover:after {
   width: 50%;
   cursor: pointer;
 }
-.banner6 p{
+
+.banner6 p {
   font-family: "Nunito Sans", sans-serif;
   font-size: 21px;
   font-weight: 500;
@@ -330,24 +372,27 @@
   padding: 0 10px;
   margin-top: 20px;
 }
-.banner6 p{
+
+.banner6 p {
   position: relative;
   color: #333;
   letter-spacing: 0.8px;
   padding: 0 10px;
-  
+
 }
-.banner6 :after{
+
+.banner6 :after {
   content: '';
   position: absolute;
   background-color: rgb(255, 62, 62);
-  height: 3px ;
+  height: 3px;
   width: 0;
   left: 0;
   bottom: -10px;
   transition: 0.3s;
 }
-.banner8 p{
+
+.banner8 p {
   font-family: "Nunito Sans", sans-serif;
   font-size: 21px;
   font-weight: 500;
@@ -356,34 +401,39 @@
   padding: 0 10px;
   margin-top: 20px;
 }
-.banner8 p{
+
+.banner8 p {
   position: relative;
   color: #333;
   letter-spacing: 0.8px;
   padding: 0 10px;
-  
+
 }
-.banner8 :after{
+
+.banner8 :after {
   content: '';
   position: absolute;
   background-color: rgb(255, 62, 62);
-  height: 3px ;
+  height: 3px;
   width: 0;
   left: 0;
   bottom: -10px;
   transition: 0.3s;
 }
-.banner8 :hover:after{
+
+.banner8 :hover:after {
   width: 50%;
   cursor: pointer;
 }
-.card-container{
+
+.card-container {
   width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
 }
-.card{
+
+.card {
   width: 80%;
   height: 130vh;
   display: flex;
@@ -391,35 +441,41 @@
   justify-content: space-around;
 
 }
-.card1{
+
+.card1 {
   box-shadow: 0px 3px 5px black;
   height: 57vh;
   border-radius: 20px;
   border: 2px solid rgb(121, 119, 119);
   position: relative;
 }
-.flex{
+
+.flex {
   display: flex;
   width: 40%;
   justify-content: space-between;
   margin-left: 71px;
   margin-right: 8px;
 }
-.title{
+
+.title {
   text-align: center;
   margin-bottom: 10px;
 
 }
-.heart-blank{
-    position: absolute;
-    top: 20px;
-    right: 15px;
+
+.heart-blank {
+  position: absolute;
+  top: 20px;
+  right: 15px;
 }
-.fasbtn{
+
+.fasbtn {
   margin-top: 15px;
   margin-left: 65px;
 }
-.bag{
+
+.bag {
   margin-top: 220px;
   width: 100%;
   height: 80vh;
@@ -427,21 +483,24 @@
   display: flex;
   align-items: center;
 }
-.whitebg{
+
+.whitebg {
   width: 20%;
   height: 40vh;
   background-color: white;
   line-height: 3;
   position: relative;
 }
-.whitebg p{
-    font-size: 35px;
-    margin-left: 180px;
-    margin-top: 25px;
-    width: 100%;
-    color: rgb(168, 168, 168);
+
+.whitebg p {
+  font-size: 35px;
+  margin-left: 180px;
+  margin-top: 25px;
+  width: 100%;
+  color: rgb(168, 168, 168);
 }
-.whitebg span{
+
+.whitebg span {
   position: absolute;
   font-size: 35px;
   top: 90px;
@@ -449,11 +508,13 @@
   width: 100%;
   font-weight: 500;
 }
-.bag-image{
+
+.bag-image {
   margin-left: 250px;
   position: relative;
 }
-.bag-image div{
+
+.bag-image div {
   background-color: black;
   color: white;
   width: 40%;
@@ -462,7 +523,8 @@
   align-items: center;
   border-radius: 50%;
 }
-.offer{
+
+.offer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -470,19 +532,22 @@
   top: -50px;
   right: 0px;
 }
-.offer p{
+
+.offer p {
   margin-top: 25px;
   margin-right: 10px;
   width: 120%;
 }
-.Siximage{
+
+.Siximage {
   margin-top: 40px;
   width: 100%;
   height: 90vh;
   display: flex;
   align-items: center;
 }
-.sixchild{
+
+.sixchild {
   width: 60%;
   display: flex;
   flex-wrap: wrap;
@@ -490,54 +555,63 @@
   justify-content: center;
   margin-top: 50px;
 }
-.sixchild2{
+
+.sixchild2 {
   width: 25%;
   height: 40vh;
   margin-top: 40px;
   margin-left: 20px;
 }
-.sixchild2 h2{
+
+.sixchild2 h2 {
   font-size: 40px;
   margin-bottom: 30px;
   font-family: "Nunito Sans", sans-serif;
   color: rgba(0, 0, 0, 0.864);
 }
-.sixchild2 p{
+
+.sixchild2 p {
   margin-bottom: 50px;
   color: grey;
   line-height: 1.8;
   font-family: "Nunito Sans", sans-serif;
 }
-.sixchild2 h3{
+
+.sixchild2 h3 {
   font-size: 40px;
   color: rgba(255, 0, 0, 0.656);
   font-family: "Nunito Sans", sans-serif;
 }
-.h4-h1{
+
+.h4-h1 {
   width: 100%;
   text-align: center;
 }
-.h4-h1 h4{
+
+.h4-h1 h4 {
   color: rgba(255, 0, 0, 0.738);
   margin-top: 20px;
   margin-bottom: 10px;
   letter-spacing: 3px;
 }
-.threeimage{
+
+.threeimage {
   width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.imge3{
+
+.imge3 {
   width: 80%;
   height: 55vh;
   display: flex;
   justify-content: space-around;
   position: relative;
 }
-.main-end{
+
+.main-end {
   width: 25%;
   background-color: white;
   font-family: "Nunito Sans", sans-serif;
@@ -547,19 +621,22 @@
   height: 25vh;
   box-shadow: 0 0 2px black;
 }
-.main-end p{
+
+.main-end p {
   text-align: center;
   margin-bottom: 15px;
   margin-top: 20px;
   font-family: "Nunito Sans", sans-serif;
   text-transform: uppercase;
 }
-.main-end h3{
+
+.main-end h3 {
   text-align: center;
   font-family: "Nunito Sans", sans-serif;
   text-transform: uppercase;
 }
-.main-end span{
+
+.main-end span {
   text-align: center;
   margin-bottom: 15px;
   margin-left: 100px;
@@ -569,21 +646,24 @@
   text-transform: uppercase;
   letter-spacing: 2px;
 }
-.main-end span:after{
+
+.main-end span:after {
   content: '';
   position: absolute;
   background-color: rgb(255, 62, 62);
-  height: 3px ;
+  height: 3px;
   width: 0;
   left: 0;
   bottom: -10px;
   transition: 0.3s;
 }
-.main-end span:hover:after{
+
+.main-end span:hover:after {
   width: 50%;
   cursor: pointer;
 }
-.main-footer{
+
+.main-footer {
   width: 100%;
   background-color: rgb(34, 34, 34);
   height: 60vh;
@@ -591,35 +671,55 @@
   display: flex;
   justify-content: space-around;
 }
-.main-footer div{
+
+.main-footer div {
   width: 16%;
   margin-top: 90px;
 }
-.main-footer h3{
+
+.main-footer h3 {
   margin-bottom: 20px;
   letter-spacing: 2px;
 }
-.main-footer h1{
+
+.main-footer h1 {
   margin-bottom: 20px;
 }
-.main-footer p{
+
+.main-footer p {
   color: grey;
   width: 50%;
 }
-.main-footer span{
+
+.main-footer span {
   color: rgba(255, 251, 0, 0.808);
   text-shadow: 0 0 1px rgb(0, 0, 0);
 }
-.twelve{
+
+.twelve {
   display: flex;
 }
-.imageflex{
+
+.imageflex {
 
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
-.imageuper{
+
+.imageuper {
   margin-bottom: 20px;
+}
+
+#redColor::placeholder {
+  color: #ff0000;
+  opacity: 1;
+  font-size: 20px;
+}
+
+#blackColor::placeholder {
+  color: #000000;
+  opacity: 1;
+  font-size: 20px;
 }
