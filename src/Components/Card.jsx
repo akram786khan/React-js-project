@@ -1,48 +1,49 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import { EightData } from "../backend/EightData";
 import { useState } from "react";
 import Button from '@mui/material/Button';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 // import { Icons } from "../backend/Icons";
-
+import { useNavigate } from "react-router-dom";
 const Card = ({
-  searchData,data=[]
+  searchData, data = []
 }) => {
+  const navigation = useNavigate()
   // const [heartUpdate, setheartUpdate] = useState(false);
-  const [Listdata,setListdata]=useState([])
+  const [Listdata, setListdata] = useState([])
 
-  console.log('--------->',Listdata)
-    // const [search,setsearch]=useState('');
-    // const setData = ()=>{
-    //   setListdata(EightData)
-    //   let filterData = Listdata.filter((item,index) => {
-    //     return item.Price == searchData;
-            
-    // })
-    // if (filterData) {
-    //      setListdata(filterData)
-    // }
-    // else {
-    //     setListdata(EightData)
-    // }
-    // }
+  console.log('--------->', Listdata)
+  // const [search,setsearch]=useState('');
+  // const setData = ()=>{
+  //   setListdata(EightData)
+  //   let filterData = Listdata.filter((item,index) => {
+  //     return item.Price == searchData;
+
+  // })
+  // if (filterData) {
+  //      setListdata(filterData)
+  // }
+  // else {
+  //     setListdata(EightData)
+  // }
+  // }
 
 
-const setData=()=>{
-  if(data.length > 0){
-    setListdata(data);
+  const setData = () => {
+    if (data.length > 0) {
+      setListdata(data);
+
+    }
+    else {
+      setListdata(EightData)
+    }
 
   }
-  else{
-    setListdata(EightData)
-  }
 
-}
-
- useEffect(()=>{
-  setData()
-    console.log('=============>',searchData)
- },[searchData])
+  useEffect(() => {
+    setData()
+    console.log('=============>', searchData)
+  }, [searchData])
 
   const heart = (index) => {
     console.log("=========>")
@@ -56,10 +57,10 @@ const setData=()=>{
       <div className="card-container">
         <div className="card">
           {
-          Listdata &&
+            Listdata &&
             Listdata.map((item, index) => {
               return (
-                <div className="card1">
+                <div className="card1" onClick={() => navigation('/ProductDetails', { state: { item } })}>
                   <div>
                     <img
                       src={item.image}
@@ -97,15 +98,15 @@ const setData=()=>{
                   </div>
 
                   <div className="heart-blank">
-                    <p onClick={() => {heart(index)}} >
-                       
+                    <p onClick={() => { heart(index) }} >
+
                     </p>
                   </div>
 
                   <div>
                     <div className="fasbtn">
                       <Button variant="contained" disableElevation>
-                         <AddShoppingCartIcon/> Add List
+                        <AddShoppingCartIcon /> Add List
                       </Button>
                     </div>
                   </div>

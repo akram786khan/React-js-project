@@ -1,14 +1,13 @@
 import React from 'react'
 
 
-
 const Button = ({
   title = 'Submit',
   onClick = () => { },
   textColor = "black",
   textSize = "15px",
   backgroundColor,
-  style,
+  style = {},
 }) => {
   return (
     <div style={Styles.container}>
@@ -27,5 +26,6 @@ const Styles = {
   container: {
     display: "flex",
     justifyContent: "center"
+
   }
 }
