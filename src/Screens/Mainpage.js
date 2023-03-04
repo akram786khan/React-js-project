@@ -15,6 +15,7 @@ import { Siximage } from '../backend/Siximage';
 import Footer from '../Components/Footer';
 import { EightData } from '../backend/EightData';
 import { useNavigate } from 'react-router-dom'
+import { Logout } from '@mui/icons-material';
 const Mainpage = () => {
   const navigate = useNavigate();
   const [search, setsearch] = useState('');
@@ -23,6 +24,7 @@ const Mainpage = () => {
   const left = () => {
     console.log('===>')
   }
+
 
   const filterData = () => {
     let data = EightData.filter((item, index) => {
@@ -33,7 +35,20 @@ const Mainpage = () => {
   }
   useEffect(() => {
     filterData()
+    checkLogin();
   }, [search])
+  const checkLogin = async () => {
+    let token = await localStorage.getItem('Token');
+    if (token) {
+      navigate('/Dashbord')
+    } else {
+
+    }
+  }
+  const LogoutUser = async () => {
+    await localStorage.removeItem('Token');
+    navigate('/')
+  }
 
   return (
     <div>
@@ -46,7 +61,7 @@ const Mainpage = () => {
           </p>
         </div>
         <div className='banner2'>
-          <p onClick={() => navigate('/Login')}>LogIn</p>
+          <p onClick={() => LogoutUser()}>Logout</p>
           <p>FAQS</p>
           <p>USD</p>
           <p><ArrowDropDownIcon /></p>

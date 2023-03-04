@@ -8,17 +8,18 @@ import ProductDetails from '../Components/ProductDetails'
 import AddToCart from "../Components/AddToCart";
 import WishList from "../Components/WishList";
 const Routing = () => {
+
   return (
     <Router>
       <Routes>
-        <Route exact path="/Login" element={<Login />} />
+        <Route exact path="/" element={<Login />} />
         <Route exact path="/WishList" element={<WishList />} />
 
         <Route exact path="/AddToCart" element={<AddToCart />} />
 
         <Route exact path="/SignUp" element={<SignUp />} />
         <Route exact path="/ProductDetails" element={<ProductDetails />} />
-        <Route exact path="/" element={<Mainpage />} />
+        <Route exact path="/Dashbord" element={<Mainpage />} />
         <Route exact path="/Shop" element={<Shop />} />
       </Routes>
     </Router>

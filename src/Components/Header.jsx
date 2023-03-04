@@ -31,27 +31,32 @@ const Header = (
     // }, [])
     const WishListData = async () => {
         let oldData = await localStorage.getItem('WishListData')
-        let newData = JSON.parse(oldData)
-        //  console.log("=sdsdsd======>>>>>", newData);
-        /// cartDataLength = newData.length
-        let len = newData.length
-        setwishListLength(len)
+        if (oldData) {
 
+            let newData = JSON.parse(oldData)
+            //  console.log("=sdsdsd======>>>>>", newData);
+            /// cartDataLength = newData.length
+
+            let len = newData.length
+            setwishListLength(len)
+        }
 
     }
     const CartLength = async () => {
         let oldData = await localStorage.getItem('AddToCart')
-        let newData = JSON.parse(oldData)
-        let len = newData.length
-        setcnt(len)
+        if (oldData) {
 
+            let newData = JSON.parse(oldData)
+            let len = newData.length
+            setcnt(len)
 
+        }
     }
 
 
 
     const home = () => {
-        navigate('/')
+        navigate('/Dashbord')
     }
 
     useEffect(() => {
