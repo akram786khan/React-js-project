@@ -46,6 +46,11 @@ function Login() {
                     body: JSON.stringify(body)
                 };
                 let result = await fetch('https://light-pumps-seal.cyclic.app/DreamCoder/api/userAuth/login', requestOptions)
+                if (result.status == 500) {
+                    toast.error("Invalid Email and Password")
+                }
+
+                console.log("====resssss====>", result);
                 let res = await result.json();
                 let data = await res;
                 console.log("===status===>", data)
@@ -53,7 +58,10 @@ function Login() {
                     toast.success("Login Successfuly...")
                     setloginRes(data);
                     await localStorage.setItem('Token', JSON.stringify(data.token))
-                    navigate('/Dashbord')
+                    setTimeout(() => {
+                        navigate('/Dashbord')
+                    }, 1000);
+
 
                 } else {
                     toast.error("Invalid Credencialss....")

@@ -5,13 +5,14 @@ const Input = ({
   onChnage = () => { },
   type = 'text',
   placeholderColor,
-  error = ""
+  error = "",
+  value,
 }) => {
   return (
     <div>
       <input type={type} id={placeholderColor}
         placeholder={placeholder} onChange={(e) => onChnage(e.target.value)}
-        style={Styles.inputStyle} />
+        style={Styles.inputStyle} value={value} />
       <p style={{ color: "red", fontSize: "17px", marginLeft: "10px" }}>{error}</p>
     </div>
   )
