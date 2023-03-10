@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import { validators } from '../backend/Validation'
 import { isValidForm } from '../backend/validForm'
 import { ToastContainer, toast } from 'react-toastify';
+import { TwoImage } from '../backend/TwoImage'
 import 'react-toastify/dist/ReactToastify.css';
 function Login() {
     const navigate = useNavigate();
@@ -12,7 +13,7 @@ function Login() {
     const [email, setemail] = useState('')
     const [password, setpassword] = useState('')
     const [errors, seterrors] = useState({});
-    const [loginRes, setloginRes] = useState({})
+    const [loginRes, setloginRes] = useState({});
     const LoginCall = async () => {
         let form = {
             // name: validators.checkRequire("Name", name),
@@ -79,7 +80,9 @@ function Login() {
     useEffect(() => {
         checkLogin();
     }, [])
+
     const checkLogin = async () => {
+        // console.log("====changeImage===>", TwoImage)
         let token = await localStorage.getItem('Token');
         if (token) {
             navigate('/Dashbord')
@@ -90,6 +93,8 @@ function Login() {
     const notify = () => toast.error("Wow so easy!");
     return (
         <div>
+
+
             <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: '90vh' }}>\
                 {/* <button onClick={notify}>Notify!</button> */}
                 <ToastContainer />

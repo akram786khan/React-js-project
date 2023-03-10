@@ -42,7 +42,7 @@ const Mainpage = () => {
     if (token) {
       navigate('/Dashbord')
     } else {
-
+      navigate('/')
     }
   }
   const LogoutUser = async () => {
