@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { EightData } from "../backend/EightData";
+//import { EightData } from "../backend/EightData";
 import { useState } from "react";
 import Button from '@mui/material/Button';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
@@ -29,22 +29,26 @@ const Card = ({
   // }
 
 
-  const setData = () => {
+
+
+  useEffect(() => {
+    //setData()
+    console.log('=============>', searchData)
+    getProductData()
+  }, [searchData])
+  const getProductData = async () => {
+    let data = await fetch("https://light-pumps-seal.cyclic.app/DreamCoder/api/Allproducts");
+    let res = await data.json();
+    let result = await res;
+    console.log("====result ======>", result);
     if (data.length > 0) {
       setListdata(data);
 
     }
     else {
-      setListdata(EightData)
+      setListdata(result.data)
     }
-
   }
-
-  useEffect(() => {
-    setData()
-    console.log('=============>', searchData)
-  }, [searchData])
-
   const heart = (index) => {
     console.log("=========>")
     // let arr = [...ListData];
