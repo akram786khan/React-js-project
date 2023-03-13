@@ -30,7 +30,7 @@ function ProductDetails() {
         // await localStorage.setItem('AddToCart', JSON.stringify(arr))
         let tok = await localStorage.getItem('Token')
         let token = await JSON.parse(tok)
-        let body = {
+        let body1 = {
             "color": item.color,
             "dis": item.dis,
             "img": item.img,
@@ -40,11 +40,11 @@ function ProductDetails() {
             "size": item.size,
             "title": item.title
         }
-
+        let body = JSON.stringify(body1);
         console.log("=====body-===>", body)
-        const res = await fetch("https://light-pumps-seal.cyclic.app/DreamCoder/api/addCartProduct", {
+        let res = await fetch("https://light-pumps-seal.cyclic.app/DreamCoder/api/addCartProduct", {
             headers: {
-                Authorization: `${token}`,
+                Authorization: `Bearer ${token}`,
                 'Content-Type': 'application/json',
                 // 'Accept-Language': strings.getLanguage(),
             },
