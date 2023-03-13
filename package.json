@@ -14,7 +14,9 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.7.0",
     "react-scripts": "5.0.1",
+    "react-text-animations": "^1.1.10",
     "react-toastify": "^9.1.1",
+    "react-type-animation": "^2.1.2",
     "rsuite": "^5.28.1",
     "web-vitals": "^2.1.4"
   },

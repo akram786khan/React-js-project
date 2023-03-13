@@ -67,7 +67,7 @@ const Card = ({
                 <div className="card1" onClick={() => navigation('/ProductDetails', { state: { item } })}>
                   <div>
                     <img
-                      src={item.image}
+                      src={item.img}
                       style={{
                         width: "100%",
                         borderRadius: "20px 20px 0px 0px",
@@ -98,9 +98,56 @@ const Card = ({
                     >
                       Price :
                     </p>
-                    <p style={{ color: "grey" }}>{item.Price}</p>
+                    <p style={{ color: "grey" }}>{item.price}</p>
                   </div>
-
+                  {/* <div className="flex">
+                    <p
+                      style={{
+                        color: "black",
+                        fontSize: "20px",
+                        fontWeight: "bold",
+                      }}
+                    >
+                      Reating :
+                    </p>
+                    <p style={{ color: "grey" }}>{item.reting}</p>
+                  </div>
+                  <div className="flex">
+                    <p
+                      style={{
+                        color: "black",
+                        fontSize: "20px",
+                        fontWeight: "bold",
+                      }}
+                    >
+                      color :
+                    </p>
+                    <p style={{ color: "grey" }}>{item.color}</p>
+                  </div>
+                  <div className="flex">
+                    <p
+                      style={{
+                        color: "black",
+                        fontSize: "20px",
+                        fontWeight: "bold",
+                      }}
+                    >
+                      size :
+                    </p>
+                    <p style={{ color: "grey" }}>{item.size}</p>
+                  </div>
+                  <div className="flex">
+                    <p
+                      style={{
+                        color: "black",
+                        fontSize: "20px",
+                        fontWeight: "bold",
+                      }}
+                    >
+                      qun :
+                    </p>
+                    <p style={{ color: "grey" }}>{item.qun}</p>
+                  </div> */}
                   <div className="heart-blank">
                     <p onClick={() => { heart(index) }} >
 
