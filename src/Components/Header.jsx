@@ -16,7 +16,7 @@ const Header = (
     }
 ) => {
     const [IsHide, setIsHide] = useState(false);
-    const [cnt, setcnt] = useState(0)
+    const [cnt, setcnt] = useState(5)
     const [wishListLength, setwishListLength] = useState(0)
     const navigate = useNavigate();
     const shop = () => {
@@ -48,7 +48,7 @@ const Header = (
 
             let newData = JSON.parse(oldData)
             let len = newData.length
-            setcnt(len)
+            setcnt(5)
 
         }
     }

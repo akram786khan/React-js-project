@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { json, useLocation } from 'react-router-dom'
 import Button from './Button';
 import Header from './Header';
+import { ToastContainer, toast } from 'react-toastify';
 function ProductDetails() {
     const { state } = useLocation();
 
@@ -52,8 +53,10 @@ function ProductDetails() {
             method: 'POST',
         });
         let resData = res.json();
-
-        console.log("========resData=======>", await resData)
+        let data = await resData;
+        if (data.status == true) {
+            toast.success("Product Add...")
+        }
 
 
     }
@@ -74,8 +77,9 @@ function ProductDetails() {
     return (
         <>
             <Header cartDataLength={cartDataLength} />
-            <h1 style={{ textAlign: "center" }}>{cartDataLength}</h1>
+
             <div style={{ height: '100vh', display: "flex", justifyContent: "center", alignItems: "center" }}>
+                <ToastContainer />
                 <div style={{ width: "99.8%", height: '80vh', border: "1px solid red", display: "flex", justifyContent: "space-around" }}>
                     <div style={{ width: "38%", height: '80vh', border: "1px solid black" }}>
                         <img src={state.item.img} style={{ width: "100%", height: '80vh' }} />
