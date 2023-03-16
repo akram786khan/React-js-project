@@ -6,15 +6,15 @@ import { ToastContainer, toast } from 'react-toastify';
 function ProductDetails() {
     const { state } = useLocation();
 
-    const [cartDataLength, setcartDataLength] = useState(0)
+    const [cartDataLength, setcartDataLength] = useState(1)
     console.log("======sdds=d====>>", state)
     useEffect(() => {
         getlength()
     }, [])
     const getlength = async () => {
-        let oldData = await localStorage.getItem('AddToCart')
-        let newData = JSON.parse(oldData)
-        setcartDataLength(newData.length)
+        // let oldData = await localStorage.getItem('AddToCart')
+        // let newData = JSON.parse(oldData)
+        // setcartDataLength(newData.length)
     }
     const AddtoCart = async (item) => {
         // let arr = []
@@ -54,6 +54,7 @@ function ProductDetails() {
         });
         let resData = res.json();
         let data = await resData;
+        setcartDataLength(cartDataLength + 1)
         if (data.status == true) {
             toast.success("Product Add...")
         }
