@@ -4,6 +4,8 @@ import Routing from './Router/Routing';
 import file from './Screens/file';
 import { TypeAnimation } from 'react-type-animation';
 import TextAnimation from "react-text-animations";
+import JavaScript from './Components/JavaScript'
+
 import Loader from '../src/Components/Loader';
 function App() {
   const [counter, setCounter] = useState(0)
@@ -11,6 +13,7 @@ function App() {
     <>
       {/* <Routing/> */}
       <Routing />
+      {/* <JavaScript /> */}
       {/* <Loader /> */}
 
 
