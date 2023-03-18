@@ -30,19 +30,43 @@ const Header = (
         // setInterval(() => {
         getCartProduct()
         //  }, 1000)
+        WishListData()
 
     }, [cartDataLength])
     const WishListData = async () => {
-        let oldData = await localStorage.getItem('WishListData')
-        if (oldData) {
+        // let oldData = await localStorage.getItem('WishListData')
+        // if (oldData) {
 
-            let newData = JSON.parse(oldData)
-            //  console.log("=sdsdsd======>>>>>", newData);
-            /// cartDataLength = newData.length
+        //     let newData = JSON.parse(oldData)
+        //     //  console.log("=sdsdsd======>>>>>", newData);
+        //     /// cartDataLength = newData.length
 
-            let len = newData.length
-            setwishListLength(len)
+        //     let len = newData.length
+        //     setwishListLength(len)
+        // }
+        console.log("=====dsdsdsd=====>>>>>>")
+        let tok = await localStorage.getItem("Token");
+        let token = await JSON.parse(tok);
+        let res = await fetch(
+            "https://light-pumps-seal.cyclic.app/DreamCoder/api/getWishListProduct",
+            {
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                    "Content-Type": "application/json",
+                },
+                method: "GET",
+            }
+        );
+
+        let resData = res.json();
+        let data = await resData;
+        console.log("=========data===>", data);
+
+        if (data) {
+            setwishListLength(data.message.length);
+            //   console.log('====cartData===>', cartData)
         }
+
 
     }
     // const CartLength = async () => {
