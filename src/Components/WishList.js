@@ -10,33 +10,44 @@ function WishList() {
     const [cartData, setcartData] = useState([]);
     const [isLoader, setisLoader] = useState(true);
     useEffect(() => {
-        getCartProduct();
+        getWishListProduct();
     }, []);
 
-    const getCartProduct = async () => {
+    const getWishListProduct = async () => {
         let tok = await localStorage.getItem("Token");
         let token = await JSON.parse(tok);
-        let res = await fetch(
-            "https://light-pumps-seal.cyclic.app/DreamCoder/api/getWishListProduct",
-            {
-                headers: {
-                    Authorization: `Bearer ${token}`,
-                    "Content-Type": "application/json",
-                },
-                method: "GET",
+        try {
+
+            let res = await fetch(
+                "https://light-pumps-seal.cyclic.app/DreamCoder/api/getWishListProduct",
+                {
+                    headers: {
+                        Authorization: `Bearer ${token}`,
+                        "Content-Type": "application/json",
+                    },
+                    method: "GET",
+                }
+            );
+
+            let resData = res.json();
+            let data = await resData;
+            console.log("=========data===>", data);
+
+            if (data) {
+                setisLoader(false)
+                setcartData(data.message);
+                // setcnt(data.message.length)
+                console.log('====cartData===length>', cartData.length)
             }
-        );
-
-        let resData = res.json();
-        let data = await resData;
-        console.log("=========data===>", data);
-
-        if (data) {
-            setisLoader(false)
-            setcartData(data.message);
-            // setcnt(data.message.length)
-            console.log('====cartData===length>', cartData.length)
+        } catch (err) {
+            if (err) {
+                toast.error("Please check internet connection...")
+                setisLoader(false)
+            }
+            console.log("==========>>", err)
         }
+
+
     };
 
     const DeleteData = async (item) => {
@@ -61,7 +72,7 @@ function WishList() {
             let resdata = await res;
             if (resdata) {
                 toast.success("Product Successfuly Deleted ...")
-                getCartProduct()
+                getWishListProduct()
             }
             console.log("====resdata ====>", resdata);
         } catch (err) {

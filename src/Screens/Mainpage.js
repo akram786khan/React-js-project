@@ -16,10 +16,34 @@ import Footer from '../Components/Footer';
 import { EightData } from '../backend/EightData';
 import { useNavigate } from 'react-router-dom'
 import { Logout } from '@mui/icons-material';
+import Box from '@mui/material/Box';
+import Modal from '@mui/material/Modal';
+import Button from '@mui/material/Button';
+
+const style = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 400,
+  bgcolor: 'background.paper',
+  border: '2px solid #000',
+  boxShadow: 24,
+  pt: 2,
+  px: 4,
+  pb: 3,
+};
 const Mainpage = () => {
   const navigate = useNavigate();
   const [search, setsearch] = useState('');
   const [cartData, setcartData] = useState([])
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => {
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
   //left button ke liye hai yeh
   const left = () => {
     console.log('===>')
@@ -52,6 +76,7 @@ const Mainpage = () => {
 
   return (
     <div>
+
       <NavBar />
 
       <div className='banner'>
@@ -61,7 +86,26 @@ const Mainpage = () => {
           </p>
         </div>
         <div className='banner2'>
-          <p onClick={() => LogoutUser()}>Logout</p>
+          <div>
+            <p onClick={handleOpen}>Logout</p>
+            <Modal
+              open={open}
+              onClose={handleClose}
+              aria-labelledby="parent-modal-title"
+              aria-describedby="parent-modal-description"
+            >
+              <Box sx={{ ...style, width: 400, height: 400 }}>
+                <h2 id="parent-modal-title">You are Sure Logout ...</h2>
+                <Button onClick={() => { handleClose() }}>
+                  Cancle
+                </Button>
+                <Button onClick={() => { LogoutUser() }}>
+                  OK
+                </Button>
+
+              </Box>
+            </Modal>
+          </div>
           <p>FAQS</p>
           <p>USD</p>
           <p><ArrowDropDownIcon /></p>
