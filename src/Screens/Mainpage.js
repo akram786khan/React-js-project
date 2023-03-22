@@ -6,6 +6,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import PinterestIcon from '@mui/icons-material/Pinterest';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import NavBar from '../Components/NavBar';
+import FemaleFashion from './FemaleFashion';
 import Header from '../Components/Header';
 import Position from '../Components/Position';
 import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
@@ -177,7 +178,7 @@ const Mainpage = () => {
               </div>
             </div>
           </div>
-
+          <FemaleFashion />
           <div className='Siximage'>
             <div className='sixchild'>
               {
